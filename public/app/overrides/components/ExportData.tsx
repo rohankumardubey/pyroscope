@@ -249,7 +249,7 @@ function ExportData(props: ExportDataProps) {
             'content-type': 'application/proto',
           },
           method: 'POST',
-          body: pprofQuery,
+          body: new Blob([pprofQuery]),
         }
       );
       if (response.isErr) {
