@@ -83,7 +83,7 @@ phlare:
     # stanza. By default, it is set to 3h - override it, for example, as below:
     # ```
     # extraArgs:
-    #   phlaredb.max-block-duration: 30m
+    #   pyroscopedb.max-block-duration: 30m
     # ```
     #
     # limits:

@@ -44,7 +44,7 @@ By adopting native integrations, we aim to provide users with a more streamlined
 
 OAuth was implemented with SQLite, which made sense when Pyroscope was a single binary, but no longer makes sense with the new distributed architecture. Transitioning to a new distributed architecture means that we had to drop support for OAuth.
 
-Going forwar, our recommendation is to use Grafana for visualizing your profiling data. Grafana 10 comes with a native support for Pyroscope and it supports OAuth and many other authentication methods.
+Going forward, our recommendation is to use Grafana for visualizing your profiling data. Grafana 10 comes with a native support for Pyroscope and it supports OAuth and many other authentication methods.
 
 ## Community Call To Action
 
