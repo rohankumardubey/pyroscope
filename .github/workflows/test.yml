@@ -5,6 +5,7 @@ on:
       - main
       - next
       - r[0-9]+ # Trigger builds after a push to weekly branches
+      - pre-v1
   pull_request:
 
 concurrency:
@@ -132,7 +133,7 @@ jobs:
           repository: grafana/deployment_tools
       - name: Deploy to fire-dev-001
         run: |
-          git config --global url."https://x-access-token:$(echo "${GITHUB_TOKEN}" | xargs)@github.com/grafana/deployment_tools".insteadOf "https://github.com/grafana/deployment_tools"
+          git config --global url."https://x-access-token:${{ steps.app-release.outputs.token }}@github.com/grafana/deployment_tools".insteadOf "https://github.com/grafana/deployment_tools"
           make docker-image/pyroscope/deploy-dev-001
         env:
           GITHUB_TOKEN: ${{ steps.app-release.outputs.token }}
